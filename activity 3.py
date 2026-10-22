@@ -18,3 +18,8 @@ c=float(c)
 print("The datatype of {0} and {1}". format(c,type(c)))
 d=int(d)
 print("The datatypr of {0} and {1}". format(d,type(d)))
+
+h="hello"
+print(h[0])
+print(h[1:3])
+print(h[::-1])
