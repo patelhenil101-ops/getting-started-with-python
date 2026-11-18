@@ -1,14 +1,22 @@
 secret=47
-print("You have 5 guesses to guess the secret number")
-answer=int(input(Enter you guess:))
-if answer<=10:
- print("ice cold")
-elif answer>=10 and <=30:
-  print("cold")
-elif answer>=30 and <=40:
-   
-else:
- print(hot)
+print("You have 5 guesses to guess the secret number mfro 1 to 50")
 
- if answer==secret:
-    print
+for i in range(5):
+  answer=int(input("enter your guess:"))
+  if answer > secret:
+    difference = answer - secret
+  else:
+    difference = secret - answer
+    if difference > 30:
+      print("Ice cold")
+    elif difference > 20:
+      print("cold")
+    elif difference > 10:
+      print("Warm")
+    else:
+      print("Hot")
+
+if answer==secret:
+    print("You won!")
+else:
+    print("Better luck next time")
