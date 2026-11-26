@@ -7,11 +7,26 @@ while True:
 
     if user_action == computer_action:
         print("You tied")
-    elif computer_action == "rock":
+    elif user_action == "rock":
         if computer_action == "scissors":
-            print("You lose rock smashes scissors")
+            print("You win rock smashes scissors")
         else:
             print("Paper covers rock, You lose")
 
-             computer_action == "paper":
+       
+    elif user_action == "paper":
+        if computer_action == "rock":
+            print("Paper covers rock! You win!")
+        else:
+            print("Scissors cuts paper! You lose.")
 
+    elif user_action == "scissors":
+        if computer_action == "paper":
+            print("Scissors cuts paper! You win!")
+        else:
+            print("Rock smashes scissors! You lose.")
+
+    #take input for playing again
+    play_again = input("Play again? (y/n): ")
+    if play_again != "y":
+        break
